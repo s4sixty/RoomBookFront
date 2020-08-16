@@ -43,9 +43,8 @@ class RoomsPage extends React.Component {
 
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ roomId, beginTime, endTime}),
-            headers: authHeader()
+            headers: authHeader(),
         };
 
         return fetch(`${process.env.REACT_APP_apiUrl}/reservations`, requestOptions)
